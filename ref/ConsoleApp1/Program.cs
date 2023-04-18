@@ -10,13 +10,12 @@ namespace LazyClassMethods
         static void Main()
         {
             Type Type = typeof(System.Lazy<>);
-            Console.WriteLine($"Class Name: {Type.Name}\n");
-            // Displaying all the Methods of Lazy<T>
-            Console.WriteLine("METHODS:");
+            Console.WriteLine($"Имя класса: {Type.Name}\n");
+            Console.WriteLine("Методы:");
             MethodInfo[] methods = Type.GetMethods();
             foreach (MethodInfo method in methods)
             { 
-                Console.WriteLine($"Method Name: {method.Name}");
+                Console.WriteLine($"Имя метода: {method.Name}");
                 Console.WriteLine($"IsAbstract: {method.IsAbstract}");
                 Console.WriteLine($"IsFamily: {method.IsFamily}");
                 Console.WriteLine($"IsFamilyAndAssembly: {method.IsFamilyAndAssembly}");
@@ -29,12 +28,11 @@ namespace LazyClassMethods
                 Console.WriteLine($"IsVirtual: {method.IsVirtual}");
                 Console.WriteLine($"ReturnType: {method.ReturnType}\n");
             }
-            // Displaying all the Constructors of Lazy<T>
-            Console.WriteLine("\nCONSTRUCTORS:");
+            Console.WriteLine("\nКонструкторы:");
             ConstructorInfo[] constructors = Type.GetConstructors();
             foreach (ConstructorInfo constructor in constructors)
             { 
-                Console.WriteLine($"Constructor Name: {constructor.Name}");
+                Console.WriteLine($"Имя конструктора: {constructor.Name}");
                 Console.WriteLine($"IsFamily: {constructor.IsFamily}");
                 Console.WriteLine($"IsFamilyAndAssembly: {constructor.IsFamilyAndAssembly}");
                 Console.WriteLine($"IsFamilyOrAssembly: {constructor.IsFamilyOrAssembly}");
@@ -42,11 +40,10 @@ namespace LazyClassMethods
                 Console.WriteLine($"IsPrivate: {constructor.IsPrivate}");
                 Console.WriteLine($"IsPublic: {constructor.IsPublic}\n");
             }
-            // Displaying all the Fields of Lazy<T>
-            Console.WriteLine("\nFIELDS:"); FieldInfo[] fields = Type.GetFields();
+            Console.WriteLine("\nПоля:"); FieldInfo[] fields = Type.GetFields();
             foreach (FieldInfo field in fields)
             {
-                Console.WriteLine($"Field Name: {field.Name}");
+                Console.WriteLine($"Имя поля: {field.Name}");
                 Console.WriteLine($"IsFamily: {field.IsFamily}");
                 Console.WriteLine($"IsFamilyAndAssembly: {field.IsFamilyAndAssembly}");
                 Console.WriteLine($"IsFamilyOrAssembly: {field.IsFamilyOrAssembly}");
@@ -55,12 +52,11 @@ namespace LazyClassMethods
                 Console.WriteLine($"IsPublic: {field.IsPublic}");
                 Console.WriteLine($"IsStatic: {field.IsStatic}\n");
             }
-            // Displaying all the Properties of Lazy<T>
-            Console.WriteLine("\nPROPERTIES:");
+            Console.WriteLine("\nСвойства:");
             PropertyInfo[] properties = Type.GetProperties();
             foreach (PropertyInfo property in properties)
             {
-                Console.WriteLine($"Property Name: {property.Name}");
+                Console.WriteLine($"Имя Свойства: {property.Name}");
                 Console.WriteLine($"Attributes: {property.Attributes}");
                 Console.WriteLine($"CanRead: {property.CanRead}");
                 Console.WriteLine($"CanWrite: {property.CanWrite}");
